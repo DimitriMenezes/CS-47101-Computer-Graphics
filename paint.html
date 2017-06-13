@@ -1,0 +1,95 @@
+
+<!-- saved from url=(0054)http://www.cs.kent.edu/~farrell/cg15/Code/03/cad1.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title> Paint </title>
+
+<p> 1. Choose the color and the shape type
+    
+</p>
+
+<p>
+    2. For lines and rectangles, click two points on canvas.
+       For triangles, its necessary three points click.
+</p>
+
+<style>
+p {
+    color: red;
+    /*position: absolute;*/
+    top: 20%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 500px;
+    margin: 5% auto;
+    text-align: left;
+    font-size: 24;
+}
+
+
+</style>
+
+<script id="vertex-shader" type="x-shader/x-vertex">
+attribute vec4 vPosition;
+attribute vec4 vColor;
+
+varying vec4 fColor;
+
+void main()
+{
+    gl_Position = vPosition;
+    fColor = vColor;
+}
+</script>
+
+<script id="fragment-shader" type="x-shader/x-fragment">
+
+precision mediump float;
+
+varying vec4 fColor;
+void main()
+{
+    gl_FragColor = fColor;
+}
+</script>
+
+<script type="text/javascript" src="./Common/webgl-utils.js"></script>
+<script type="text/javascript" src="./Common/initShaders.js"></script>
+<script type="text/javascript" src="./Common/MV.js"></script>
+<script type="text/javascript" src="./js/paint.js"></script>
+
+</head>
+
+<body>
+
+<div>
+<canvas id="gl-canvas" width="512" "="" height="512" oops="" ...="" your="" browser="" doesn't="" support="" the="" html5="" canvas="" element="" <="">
+</canvas></div>
+<div>
+<select id="mymenu" size="7">
+    <option value="0">Black</option>
+    <option value="1">Red</option>
+    <option value="2">Yellow</option>
+    <option value="3">Green</option>
+    <option value="4">Blue</option>
+    <option value="5">Magenta</option>
+    <option value="6">Cyan</option>
+</select>
+
+<select id="typemenu" size="3">
+    <option value="0">Line</option>
+    <option value="1">Rectangle</option>
+    <option value="2">Triangle</option>
+    
+</select>
+
+</div>
+
+
+
+
+
+</body>
+
+</html>
