@@ -8,4 +8,7 @@ Gasket kaleidoscope Assignment:
 -middle button to have it iterate through subdivisions displaying a new one every second until a maximum of 8 subdivisions 
 
 Paint Assignment:
-Choose Color and a shape to draw in canvas.
+
+1. Choose the color and the shape to draw in canvas.
+
+2. For lines and rectangles, click two points on canvas. For triangles, its necessary three points clickedS.
